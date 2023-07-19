@@ -1,0 +1,592 @@
+INFO|2023-07-14 17:36:20,010|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:36:20,010|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:36:20,010|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:36:20,017|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:36:20,128|compyle.ext_module|Compiling code at: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:36:27,535|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:36:27,535|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:36:27,535|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:36:27,535|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:36:27,537|pysph.solver.application|Setup took: 7.53267 secs
+INFO|2023-07-14 17:36:27,538|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 5e-05
+INFO|2023-07-14 17:37:04,312|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:37:04,312|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:37:04,312|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:37:04,318|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:37:04,420|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:37:04,422|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:37:04,422|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:37:04,422|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:37:04,422|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:37:04,423|pysph.solver.application|Setup took: 0.11579 secs
+INFO|2023-07-14 17:37:04,424|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 5e-05
+INFO|2023-07-14 17:40:16,821|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:40:16,821|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:40:16,821|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:40:16,826|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:40:16,922|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:40:16,924|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:16,924|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:16,924|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:16,924|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:16,925|pysph.solver.application|Setup took: 0.11000 secs
+INFO|2023-07-14 17:40:16,926|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 2e-05
+INFO|2023-07-14 17:40:29,459|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:40:29,459|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:40:29,459|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:40:29,465|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:40:29,581|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:40:29,583|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:29,583|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:29,583|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:29,583|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:29,584|pysph.solver.application|Setup took: 0.13100 secs
+INFO|2023-07-14 17:40:29,584|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 1e-05
+INFO|2023-07-14 17:40:38,614|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:40:38,614|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:40:38,614|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:40:38,619|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:40:38,720|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:40:38,721|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:38,722|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:38,722|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:38,722|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:40:38,723|pysph.solver.application|Setup took: 0.11400 secs
+INFO|2023-07-14 17:40:38,724|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 1e-06
+INFO|2023-07-14 17:41:12,972|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:41:12,972|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:41:12,972|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:41:12,979|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:41:13,089|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:41:13,091|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:13,091|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:13,091|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:13,091|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:13,092|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:13,093|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:41:13,093|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:41:13,093|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:41:13,093|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:41:13,093|pysph.solver.application|Setup took: 0.12599 secs
+INFO|2023-07-14 17:41:13,093|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 1e-07
+INFO|2023-07-14 17:41:29,162|pysph.solver.application|Started as:
+D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main.py
+INFO|2023-07-14 17:41:29,163|pysph.solver.application|Running on DESKTOP-20O0H30 with address 169.254.141.22
+INFO|2023-07-14 17:41:29,163|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-07-14 17:41:29,169|pysph.solver.application|Generating output in D:\PyCharmProjects\pythonProject\Asteroid_Impact_Simulation\l2023_7\main_output
+INFO|2023-07-14 17:41:29,276|compyle.ext_module|Precompiled code from: C:\Users\CulfateBurner\.pysph\source\py3.9-win-amd64\m_c6cc02e63f89b3f9b6d7544ed8676246.pyx
+INFO|2023-07-14 17:41:29,278|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  asteroid: 11289
+  impactor: 49
+  Total: 11338
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:29,278|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  CubicSpline(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:29,278|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=2)
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:29,278|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EulerIntegrator(asteroid=EulerStep(), impactor=EulerStep())
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:29,279|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TillotsonEOS_new(dest='impactor', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    TillotsonEOS_new(dest='asteroid', sources=None, rho0=2.7,
+    us=35000000000.0, a=0.5, b=1.3, e0=160000000000.0, A=180000000000.0,
+    B=180000000000.0, us_=180000000000.0, alpha=5, beta=5, c0=30000.0,
+    cv=7900000.0), 
+    InternalEnergy2D(dest='impactor', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    InternalEnergy2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    alpha=1, beta=1), 
+    ContinuityEquation2D(dest='impactor', sources=['asteroid',
+    'impactor']), 
+    ContinuityEquation2D(dest='asteroid', sources=['asteroid',
+    'impactor']), 
+    VelocityGradient2D(dest='impactor', sources=['impactor']), 
+    VelocityGradient2D(dest='asteroid', sources=['asteroid']), 
+    ROCK(dest='impactor', sources=None), 
+    ROCK(dest='asteroid', sources=None), 
+    RadialReturn2D(dest='impactor', sources=['impactor']), 
+    RadialReturn2D(dest='asteroid', sources=['asteroid']), 
+    HookesDeviatoricStressRate2D(dest='impactor', sources=['impactor'],
+    shear_mod=5600000000.0), 
+    HookesDeviatoricStressRate2D(dest='asteroid', sources=['asteroid'],
+    shear_mod=5600000000.0), 
+    MomentumEquation2D(dest='impactor', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquation2D(dest='asteroid', sources=['asteroid', 'impactor'],
+    c0=40000.0, alpha=1.0, beta=1.0, gx=0.0, gy=0.0, gz=0.0,
+    tensile_correction=False), 
+    MomentumEquationWithStress2D(dest='impactor', sources=['impactor'],
+    wdeltap=-1, n=1), 
+    MomentumEquationWithStress2D(dest='asteroid', sources=['asteroid'],
+    wdeltap=-1, n=1)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0, name='Group_0')
+]
+----------------------------------------------------------------------
+INFO|2023-07-14 17:41:29,280|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:41:29,280|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-07-14 17:41:29,280|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-07-14 17:41:29,280|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-07-14 17:41:29,280|pysph.solver.application|Setup took: 0.12500 secs
+INFO|2023-07-14 17:41:29,280|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 0.0001
+INFO|2023-07-15 11:57:07,031|pysph.solver.application|Running on Administrator with address 172.20.226.61
+INFO|2023-07-15 11:57:07,046|pysph.solver.application|Generating output in D:\×²»÷Ä£Äâ·ÂÕæ\l2023_7\main_output
+INFO|2023-07-15 12:12:44,002|pysph.solver.application|Running on Administrator with address 172.20.226.61
+INFO|2023-07-15 12:12:44,008|pysph.solver.application|Generating output in D:\×²»÷Ä£Äâ·ÂÕæ\l2023_7\main_output
